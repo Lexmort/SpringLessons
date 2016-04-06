@@ -44,5 +44,11 @@ public class Application {
         
         MessageRenderer messageRenderer = ctx2.getBean("messageRenderer", MessageRenderer.class);
         messageRenderer.render();
+        
+        IfInjectSimple simple = (IfInjectSimple)ctx2.getBean("injectSimple");
+        System.out.println(simple);
+        
+        IfInjectSimpleSpel simple2 = (IfInjectSimpleSpel)ctx2.getBean("injectSimpleSpel");
+        System.out.println(simple2);
     }
 }

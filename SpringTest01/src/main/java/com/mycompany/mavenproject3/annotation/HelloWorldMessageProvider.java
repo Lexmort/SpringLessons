@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
  *
  * @author Lexus
  */
-@Service("messageProvider")
-public class HelloWorldMessageProvider implements MessageProvider {
-    @Override
+@Service("messageProvider1")
+public class HelloWorldMessageProvider /*implements MessageProvider*/ {
+//    @Override
     public String getMessage() {
         return "Hello World!";
     }
