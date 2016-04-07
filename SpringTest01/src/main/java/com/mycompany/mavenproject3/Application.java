@@ -36,8 +36,8 @@ public class Application {
 //        System.out.println(oracle.defineMeaningOfLife());
         
         GenericXmlApplicationContext ctx2 = new GenericXmlApplicationContext();
-//        ctx2.load("classpath:app-context-xml.xml");
-        ctx2.load("classpath:app-context-annotation.xml");
+        ctx2.load("classpath:app-context-xml.xml");
+//        ctx2.load("classpath:app-context-annotation.xml");
         ctx2.refresh();
 //        MessageProvider messageProvider = ctx2.getBean("messageProvider", MessageProvider.class);
 //        System.out.println(messageProvider.getMessage());
@@ -50,5 +50,8 @@ public class Application {
         
         IfInjectSimpleSpel simple2 = (IfInjectSimpleSpel)ctx2.getBean("injectSimpleSpel");
         System.out.println(simple2);
+        
+        IfInjectRef injectRef = (IfInjectRef) ctx2.getBean("injectRef");
+        System.out.println(injectRef);
     }
 }
