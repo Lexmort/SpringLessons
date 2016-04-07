@@ -36,7 +36,7 @@
     <bean id="oracle" name="wiseworm" class="com.mycompany.mavenproject3.BookwormOracle"/>
     <bean id="injectRef" class="com.mycompany.mavenproject3.xml.InjectRef">
         <property name="oracle">
-            <ref bean="oracle"/>
+            <ref bean="wiseworm"/>
         </property>
     </bean>
 </beans>
